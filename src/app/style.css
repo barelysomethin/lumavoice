@@ -1,0 +1,263 @@
+.main-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Voice artist font and gradient update */
+.voice-artist {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+}
+
+/* Gradient animated submit button */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.tts-submit-button {
+    background: linear-gradient(190deg, #ff46cb, #c700f4);
+    background-size: 600% 600%;
+    animation: gradientAnimation 6s ease infinite;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.tts-submit-button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+/* Voice list container rounded corners and black scrollbar */
+.voices-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Scrollbar styling for voices-list */
+.voices-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.voices-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 12px;
+}
+
+.voices-list::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 12px;
+}
+
+/* Country and language tags styling */
+.voice-tag {
+    font-size: 0.75rem;
+    background: linear-gradient(90deg, #cefce9, #f0fff4);
+    color: #333;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    user-select: none;
+}
+
+/* Radio button checked color black */
+.voice-radio:checked {
+    accent-color: black;
+}
+
+.form-container {
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #00ffa6, #aa00ff 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tts-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tts-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    height: 12rem;
+    text-align: left;
+    vertical-align: top;
+    caret-color: black;
+    text-indent: 0;
+    border: 2px solid #000 !important;
+    resize: none;
+}
+
+.char-counter {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.25rem;
+    text-align: right;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tts-submit-button {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.tts-submit-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.filter-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-input,
+.filter-select {
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #a9a9a9;
+    border-radius: 4px;
+    max-width: 180px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.voices-container {
+    margin-bottom: 1.5rem;
+}
+
+.voices-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+.voice-card {
+    display: block;
+    border: 1px #ccc;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    background-color: #eaecec;
+    transition: background-color 0.2s ease;
+}
+
+.voice-card:hover {
+    background-color: #e4a8f7;
+}
+
+.voice-radio {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.voice-artist {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    display: inline-block;
+}
+
+.voice-tags {
+    margin-left: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.voice-tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.audio-container {
+    margin-top: 1rem;
+}
+
+.audio-player {
+    width: 100%;
+    outline: none;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.noaudio {
+    color: rgb(153, 153, 153);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.genaudio {
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.selectvoicehead {
+    color: rgb(19, 19, 19);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
