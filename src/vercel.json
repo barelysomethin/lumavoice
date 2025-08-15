@@ -1,19 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
+  
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "/",
+      "dest": "/"
     },
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "/api",
+      "dest": "/api/tts"
     }
   ]
 }
