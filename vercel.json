@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "src/app/api/tts/route.js": {
+    "api/tts/route.js": {
       "maxDuration": 300
     }
   },
