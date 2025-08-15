@@ -21,17 +21,20 @@ export async function POST(request) {
       audioStream.on("data", (chunk) => chunks.push(chunk));
       audioStream.on("end", () => {
         const audioBuffer = Buffer.concat(chunks);
-        resolve(
-          new Response(audioBuffer, {
-            status: 200,
-            headers: {
-              "Content-Type": "audio/mpeg",
-              "Content-Disposition": `inline; filename="tts.mp3"`,
-            },
-          })
-        );
+        resolve(new Response(audioBuffer, {
+          status: 200,
+          headers: {
+            "Content-Type": "audio/mpeg",
+            "Content-Disposition": `inline; filename="tts.mp3"`,
+          },
+        }));
       });
-      audioStream.on("error", reject);
+      audioStream.on("error", (error) => {
+        console.error("❌ Stream Error:", error);
+        reject(new Response(JSON.stringify({ error: "TTS streaming failed" }), {
+          status: 500,
+        }));
+      });
     });
   } catch (error) {
     console.error("❌ TTS Error:", error);
