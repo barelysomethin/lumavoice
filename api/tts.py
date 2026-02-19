@@ -48,8 +48,11 @@ class handler(BaseHTTPRequestHandler):
             self.wfile.write(audio_data)
 
         except Exception as e:
-            print(f"Error: {e}")
+            import traceback
+            print(f"Error processing request: {e}")
+            traceback.print_exc()
             self.send_response(500)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            self.wfile.write(json.dumps({'error': str(e)}).encode('utf-8'))
+            self.wfile.write(json.dumps({'error': str(e), 'trace': traceback.format_exc()}).encode('utf-8'))
+
